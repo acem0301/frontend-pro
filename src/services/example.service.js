@@ -1,22 +1,9 @@
 import http from "../http-common";
 
-class UploadFilesService {
-  upload(file, onUploadProgress) {
-    let formData = new FormData();
-
-    formData.append("file", file);
-
-    return http.post("/upload", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-      onUploadProgress,
-    });
-  }
-
-  getFiles() {
-    return http.get("/files");
-  }
+class ExampleService {
+  fetchCharacters = async () => {
+    return http.get("/character");
+  };
 }
 
-export default new UploadFilesService();
+export default new ExampleService();
