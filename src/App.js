@@ -1,9 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { CssBaseline } from "@material-ui/core";
-import ConsumoAPI from "./components/ConsumoApi";
-import PlaceToVisit from "./components/PlaceToVisit";
-import Wallpaper from "./assets/images/workers.jpg";
+import Buscador from "./pages/Buscador";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +14,7 @@ export default function App() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <ConsumoAPI />
+      <Buscador />
     </div>
   );
 }
