@@ -1,6 +1,6 @@
 import http from "../http-common";
 
-class ExampleService {
+class LoginService {
   fetchCharacters = async () => {
     return http.post("/login", {
       username: "crolon",
@@ -9,4 +9,4 @@ class ExampleService {
   };
 }
 
-export default new ExampleService();
+export default new LoginService();
