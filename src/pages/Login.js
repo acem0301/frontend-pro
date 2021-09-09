@@ -81,8 +81,7 @@ export default class Login extends React.Component {
     try {
       await LoginService.login(this.state.email, this.state.password);
       this.setState({ loading: false });
-
-      //this.props.history.push("/badges");
+      this.props.history.push("/dashboard");
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
