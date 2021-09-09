@@ -1,10 +1,10 @@
 import http from "../http-common";
 
 class LoginService {
-  fetchCharacters = async () => {
+  login = async (email, password) => {
     return http.post("/login", {
-      username: "crolon",
-      password: "12345",
+      username: email,
+      password: password,
     });
   };
 }
